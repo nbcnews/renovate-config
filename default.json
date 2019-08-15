@@ -1,0 +1,53 @@
+{
+  "extends": [
+    "config:base",
+    "schedule:earlyMondays"
+  ],
+  "prConcurrentLimit": 5,
+  "prCreation": "not-pending",
+  "prHourlyLimit": 2,
+  "ignoreDeprecated": true,
+  "ignoreUnstable": true,
+  "labels": [],
+  "rebaseConflictedPrs": true,
+  "rebaseLabel": "rebase",
+  "enabled": true,
+  "devDependencies": {
+    "enabled": true
+  },
+  "dependencies": {
+    "enabled": true
+  },
+  "packageRules": [{
+      "packagePatterns": [
+        "^babel",
+        "@babel"
+      ],
+      "excludePackageNames": [],
+      "groupName": "babel packages",
+      "enabled": true
+    },
+    {
+      "packagePatterns": [
+        "^eslint"
+      ],
+      "groupName": "eslint packages",
+      "enabled": true
+    },
+    {
+      "packagePatterns": [
+        "^jest",
+        "@jest"
+      ],
+      "groupName": "jest packages",
+      "enabled": true
+    },
+    {
+      "packagePatterns": [
+        "^postcss"
+      ],
+      "groupName": "postcss packages",
+      "enabled": true
+    }
+  ]
+}
